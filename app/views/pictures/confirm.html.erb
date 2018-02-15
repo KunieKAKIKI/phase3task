@@ -1,0 +1,19 @@
+<h2>投稿内容確認</h2>
+
+<%= form_with(model: @picture, url: pictures_path, local: true) do |form| %>
+  <%= form.hidden_field :image %>
+  <%= form.hidden_field :content %>
+  
+  <p>image:</p>
+  <p class="confirm_image"><%= image_tag(@picture.image.url) %></p>
+  <%= hidden_field_tag :"cache[image]",@picture.image.cache_name %>
+  <p>content:</p>
+  <p><%= @picture.content %></p>
+  <%= form.submit  "投稿" %>
+<% end %>
+
+<%= form_with(model: @picture, url: new_picture_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :image %>
+  <%= form.hidden_field :content %>
+  <%= form.submit "もどる", name: 'back' %>
+<% end %>

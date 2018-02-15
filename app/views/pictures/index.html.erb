@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h2>写真一覧</h2>
+<div class="btn_area">
+  <%= link_to 'New Picture', new_picture_path, class: 'btn btn-default' %>
+</div>
+
+
+<% @pictures.each do |picture| %>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <div class="image_area">
+      <div class="picture_image"><%= link_to image_tag(picture.image), picture_path(picture.id) %></div>
+      </div>
+      <div class="caption">
+        <p><%= User.find_by(id: picture.user_id).name %>さん</p>
+      </div>
+    </div>
+  </div>
+<% end %>

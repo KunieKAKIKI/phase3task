@@ -1,0 +1,48 @@
+// Place all the styles related to the pictures controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.login {
+  margin:20px 10px;
+  text-align:right;
+}
+
+.home_image {
+  width:30px;
+}
+
+.top_image {
+  width:100%;
+}
+
+.show_image_area {
+
+}
+
+.confirm_image_area {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.image_area {
+  height: 250px;
+  overflow: hidden;
+  margin-top:10px;
+}
+
+.picture_image {
+  max-width: 80%;
+  height:auto;
+  margin: 0 auto;
+}
+
+.list {
+  height:300px;
+}
+
+.btn_area {
+  margin-top:10px;
+  margin-bottom:10px;
+}
+

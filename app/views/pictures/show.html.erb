@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-sm-12 col-md-12">
+    <div class="thumbnail">
+      <div>
+        <%= User.find_by(id: @picture.user_id).name %>さん
+      </div>
+      <div class="show_image_area">
+        <div class="picture_image"><%= image_tag(@picture.image) %></div>
+      </div>
+      <div class="caption">
+        <p><%= @picture.content %></p>
+        <p>
+          <% if !logged_in? %>
+          <% elsif @picture.user_id == current_user.id %>
+            <%= link_to '編集',edit_picture_path(@picture.id),data: { confirm: '本当に編集していいですか？' }, class: 'btn btn-warning' %>
+            <%= link_to '削除',picture_path(@picture.id),method: :delete,data: { confirm: '本当に削除していいですか？' },class: 'btn btn-danger' %>
+          <% end %> 
+        </p>
+        <p>
+          <% unless @picture.user == current_user %>
+            <% if @favorite.present? %>
+              <%= link_to 'お気に入り解除する', favorite_path(picture_id: @picture.id), method: :delete, class: 'btn btn-danger' %>
+            <% else %>
+              <%= link_to 'お気に入りする', favorites_path(picture_id: @picture.id), method: :post, class: 'btn btn-primary' %>
+            <% end %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<p><%= link_to '写真一覧へ', pictures_path %></p>
