@@ -8,21 +8,16 @@
   text-align:right;
 }
 
-.home_image {
-  width:30px;
-}
-
 .top_image {
   width:100%;
 }
 
 .show_image_area {
-
+  margin-top :5px;
 }
 
-.confirm_image_area {
-  max-width: 80%;
-  margin: 0 auto;
+.confirm_image img {
+  max-width: 100%;
 }
 
 .image_area {
@@ -31,14 +26,10 @@
   margin-top:10px;
 }
 
-.picture_image {
-  max-width: 80%;
+.picture_image img {
+  max-width: 100%;
   height:auto;
   margin: 0 auto;
-}
-
-.list {
-  height:300px;
 }
 
 .btn_area {

@@ -3,7 +3,7 @@
 <div class="row">
   <% @favorite_pictures.each do |picture| %>
   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail list">
+    <div class="thumbnail">
       <div class="image_area">
       <div class="picture_image"><%= link_to image_tag(picture.image), picture_path(picture.id) %></div>
       </div>
