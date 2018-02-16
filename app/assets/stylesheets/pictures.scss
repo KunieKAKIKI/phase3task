@@ -25,9 +25,12 @@
   overflow: hidden;
   margin-top:10px;
 }
+.picture_image {
+  text-align:center;
+}
 
 .picture_image img {
-  max-width: 100%;
+  max-width: 96%;
   height:auto;
   margin: 0 auto;
 }
